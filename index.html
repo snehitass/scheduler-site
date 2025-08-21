@@ -2,8 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DocuSched | Smart Scheduling for Medical Professionals</title>
-    <meta name="description" content="Streamline your medical practice with DocuSched - the scheduling solution designed specifically for residents and attendings.">
+    <title>EquiShift | Smart Scheduling for Medical Professionals</title>
+    <meta name="description" content="Streamline your medical practice with Equishift - the scheduling solution designed specifically for residents and attendings.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -49,8 +49,9 @@
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <i class="fas fa-calendar-check text-primary text-2xl"></i>
-                <span class="text-xl font-bold text-dark">DocuSched</span>
+                <a href="#section-hero">
+                    <img class="h-[75px] w-auto" src="/plain-logo-1.svg" alt="image"/>
+                    <a href="#section-hero" class="text-2xl font-bold text-dark">EquiShift</a>
             </div>
             <div class="hidden md:flex space-x-8">
                 <a href="#section-features" class="hover:text-primary transition">Features</a>
@@ -80,10 +81,11 @@
     <section id="section-hero" class="bg-gradient-to-r from-blue-50 to-indigo-50 py-16 md:py-24">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
-                <h1 class="text-4xl md:text-5xl font-bold text-dark mb-4">Smart Scheduling for <span class="text-primary">Medical Professionals</span></h1>
-                <p class="text-lg text-gray-600 mb-8">Streamline your hospital workflow with intelligent scheduling designed specifically for residents and attendings. Save hours of administrative work each week.</p>
+                <div class="inline-block bg-blue-100 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">Currently for Emergency Medicine</div>
+                <h1 class="text-4xl md:text-5xl font-bold text-dark mb-4">Balanced Schedules for <span class="text-primary">Better Care</span></h1>
+                <p class="text-lg text-gray-600 mb-8">We’re launching with Emergency Medicine’s unique demands and expanding to every specialty — bringing fair, balanced scheduling to residents and attendings across healthcare.</p>
                 <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                    <a href="#section-cta" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition text-center font-medium">Start Free Trial</a>
+                    <a href="https://calendly.com/snehitasana/30min" target="_blank" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition text-center font-medium">Schedule a Call</a>
                     <a href="#section-features" class="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-blue-50 transition text-center font-medium">Learn More</a>
                 </div>
                 <div class="mt-8 flex items-center space-x-2 text-gray-500">
@@ -98,7 +100,7 @@
     </section>
 
     <!-- Trust Indicators -->
-    <section class="bg-white py-8 border-b">
+    <!-- <section class="bg-white py-8 border-b">
         <div class="container mx-auto px-4">
             <p class="text-center text-gray-500 mb-6">Trusted by medical professionals at</p>
             <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
@@ -116,14 +118,14 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Benefits Section -->
     <section id="section-benefits" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <h2 class="text-3xl font-bold text-dark mb-4">Designed for Medical Workflows</h2>
-                <p class="text-gray-600">DocuSched understands the unique scheduling challenges in healthcare and provides specialized solutions.</p>
+                <p class="text-gray-600">EquiShift understands the unique scheduling challenges in healthcare and provides specialized solutions.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
@@ -131,21 +133,21 @@
                         <i class="fas fa-clock text-primary text-xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Time Savings</h3>
-                    <p class="text-gray-600">Reduce scheduling admin time by 70% with our intelligent algorithms that account for rotations, call schedules, and preferences.</p>
+                    <p class="text-gray-600">Reduce scheduling admin time by 70% with our intelligent algorithms that account for shifts, coverage, and preferences.</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
                     <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-user-md text-primary text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Resident-Centric</h3>
-                    <p class="text-gray-600">Specialized features for residency programs including milestone tracking, rotation management, and duty hour compliance.</p>
+                    <h3 class="text-xl font-semibold mb-2">Resident & Physician Well-Being</h3>
+                    <p class="text-red-600">Built for ACGME duty hour compliance, circadian rhythm–friendly shifts, and seamless vacation coverage—ensuring fair, balanced schedules for you and your colleagues.</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
                     <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-shield-alt text-primary text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">HIPAA Compliant</h3>
-                    <p class="text-gray-600">Built with healthcare security in mind, ensuring all your scheduling data meets strict privacy requirements.</p>
+                    <h3 class="text-xl font-semibold mb-2">Effortless and Flexible</h3>
+                    <p class="text-red-600">Delivered as a service—no new software to learn. Last-minute changes are easily accommodated, keeping schedules accurate without the hassle.</p>
                 </div>
             </div>
         </div>
@@ -168,7 +170,7 @@
                     <ul class="space-y-3">
                         <li class="flex items-start">
                             <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
-                            <span>Automatic call schedule generation with fair distribution</span>
+                            <span>ACGME duty hour compliance monitoring</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
@@ -176,7 +178,7 @@
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
-                            <span>ACGME duty hour compliance monitoring</span>
+                            <span>Automatic call schedule generation with fair distribution</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
@@ -480,7 +482,7 @@
             <div class="max-w-md mx-auto bg-white rounded-lg p-1 shadow-lg">
                 <form class="flex flex-col sm:flex-row">
                     <input type="email" placeholder="Enter your email" class="flex-grow px-4 py-3 rounded-lg focus:outline-none text-gray-800">
-                    <button type="submit" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition mt-2 sm:mt-0 sm:ml-2">Start Free Trial</button>
+                    <a href="https://calendly.com/snehitasana/30min" type="submit" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition mt-2 sm:mt-0 sm:ml-2">Start Free Trial</a>
                 </form>
             </div>
             <p class="mt-4 text-blue-100">  </p>
