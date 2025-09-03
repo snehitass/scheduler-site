@@ -507,7 +507,37 @@
                     <a href="https://calendly.com/snehitasana/30min" type="submit" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition mt-2 sm:mt-0 sm:ml-2">Start Free Trial</a>
                 </form>
             </div> -->
-            <form action="https://formspree.io/f/xnnbgbyv" method="post" class="space-y-8">
+            <!-- COPY PASTE FROM WEB3 -->
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- Replace with your Access Key -->
+                <input type="hidden" name="access_key" value="f3eefa75-b043-474c-a2ee-b5a565ef4adc">
+
+                <!-- Form Inputs. Each input must have a name="" attribute -->
+                <input type="text" name="name" required>
+                <input type="email" name="email" required>
+                <textarea name="message" required></textarea>
+
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <!-- Custom Confirmation / Success Page -->
+                <input type="hidden" name="redirect" value="https://www.equishift.ai">
+
+                <button id="submitBtn" type="submit">
+                    <span>Submit Form</span>
+                    <!-- spinner hidden by default -->
+                    <svg id="spinner" class="ml-2 hidden h-5 w-5 animate-spin" viewBox="0 0 24 24" fill="none">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4A4 4 0 004 12z"></path>
+                    </svg>
+                </button>
+
+            </form>
+            <!-- <form action="https://api.web3forms.com/submit" method="POST" class="space-y-8">
+                <input type="hidden" name="access_key" value="f3eefa75-b043-474c-a2ee-b5a565ef4adc">
+                <input type="hidden" name="redirect" value="https://yourdomain.com/thanks">
+
                 <div>
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
                     <input type="email" name="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@gmail.com" required>
@@ -520,11 +550,37 @@
                     <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
                     <textarea name="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..." required></textarea>
                 </div>
+                <input type="hidden" name="redirect" value="google.com">
                 <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
-            </form>
+            </form> -->
             <p class="mt-4 text-blue-100">  </p>
         </div>
+    <!-- Success Modal (hidden by default) -->
+        <div id="successModal" class="fixed inset-0 z-50 hidden items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+            <!-- Backdrop -->
+            <div class="absolute inset-0 bg-black/50" data-close></div>
+
+            <!-- Panel -->
+            <div class="relative z-10 w-[92%] max-w-md scale-95 transform rounded-2xl bg-white p-6 opacity-0 shadow-xl transition-all">
+                <div class="flex items-start justify-between">
+                <h2 id="modal-title" class="text-lg font-semibold">Thanks—message sent!</h2>
+                <button type="button" class="ml-3 rounded-full p-2 hover:bg-gray-100" data-close aria-label="Close">✕</button>
+                </div>
+                <p id="modal-desc" class="mt-2 text-sm text-gray-600">We’ll get back to you shortly.</p>
+                <div class="mt-4 flex justify-end gap-2">
+                <button type="button" class="rounded-xl border px-4 py-2" data-close>Close</button>
+                <!-- OPTIONAL: redirect after modal -->
+                <a href="https://www.equishift.ai" class="rounded-xl bg-black px-4 py-2 text-white">Go to site</a>
+                </div>
+            </div>
+        </div>
     </section>
+
+
+
+
+
+    
 
     <!-- Footer -->
     <footer class="bg-dark text-gray-300 py-12">
@@ -575,6 +631,61 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    (() => {
+    const form = document.getElementById('contactForm');
+    const btn = document.getElementById('submitBtn');
+    const spinner = document.getElementById('spinner');
+    const modal = document.getElementById('successModal');
+    const panel = modal.querySelector('.bg-white');
+
+    function openModal() {
+        modal.classList.remove('hidden');
+        requestAnimationFrame(() => {
+        panel.classList.remove('opacity-0','scale-95');
+        panel.classList.add('opacity-100','scale-100');
+        });
+        document.addEventListener('keydown', onEsc);
+    }
+    function closeModal() {
+        panel.classList.add('opacity-0','scale-95');
+        panel.classList.remove('opacity-100','scale-100');
+        setTimeout(() => modal.classList.add('hidden'), 150);
+        document.removeEventListener('keydown', onEsc);
+    }
+    function onEsc(e){ if(e.key === 'Escape') closeModal(); }
+
+    modal.addEventListener('click', (e) => {
+        if (e.target.matches('[data-close], [data-close] * , .bg-black\\/50')) closeModal();
+    });
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        btn.disabled = true; spinner.classList.remove('hidden');
+
+        try {
+        const body = new FormData(form); // Web3Forms accepts URL-encoded or multipart
+        const resp = await fetch(form.action, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body
+        });
+        const data = await resp.json().catch(() => ({}));
+        if (!resp.ok) throw new Error(data.message || 'Submission failed');
+
+        form.reset();
+        openModal();
+        } catch (err) {
+        alert(err.message || 'Something went wrong. Please try again.');
+        } finally {
+        btn.disabled = false; spinner.classList.add('hidden');
+        }
+    });
+    })();
+    </script>
+
+
 
     <script>
         // Mobile menu toggle
