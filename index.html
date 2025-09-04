@@ -1,5 +1,15 @@
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XHLVMBMSS8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XHLVMBMSS8');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EquiShift | Smart Scheduling for Medical Professionals</title>
@@ -433,17 +443,17 @@
         <div class="container mx-auto px-4 max-w-3xl">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-dark mb-4">Frequently Asked Questions</h2>
-                <p class="text-gray-600">Find answers to common questions about DocuSched.</p>
+                <p class="text-gray-600">Find answers to common questions about EquiShift</p>
             </div>
             <div class="space-y-4">
                 <div class="border border-gray-200 rounded-lg overflow-hidden">
                     <button class="accordion-toggle w-full flex justify-between items-center p-4 hover:bg-gray-50 transition">
-                        <span class="text-lg font-medium text-left">Is DocuSched HIPAA compliant?</span>
+                        <span class="text-lg font-medium text-left">Is EquiShift HIPAA compliant?</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="accordion-content px-4">
                         <div class="pb-4 text-gray-600">
-                            <p>Yes, DocuSched is fully HIPAA compliant. We sign Business Associate Agreements (BAAs) with all our healthcare customers and implement strict security measures including data encryption, access controls, and audit logging to protect patient and provider information.</p>
+                            <p>Yes, EquiShift is fully HIPAA compliant. We sign Business Associate Agreements (BAAs) with all our healthcare customers and implement strict security measures including data encryption, access controls, and audit logging to protect patient and provider information.</p>
                         </div>
                     </div>
                 </div>
@@ -637,8 +647,12 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
-                        <i class="fas fa-calendar-check text-primary text-2xl"></i>
-                        <span class="text-xl font-bold text-white">DocuSched</span>
+                        <a href="#section-hero" class="text-2xl font-bold text-white">
+                            <img class="h-[75px] w-auto" src="/darker-logo.png" alt="image"/>
+                        </a>
+                        <a href="#section-hero" class="text-2xl font-bold text-white">EquiShift</a>
+                        <!-- <i class="fas fa-calendar-check text-primary text-2xl"></i>
+                        <span class="text-xl font-bold text-white">DocuSched</span> -->
                     </div>
                     <p class="mb-4">Smart scheduling solutions for medical education programs.</p>
                     <div class="flex space-x-4">
@@ -668,7 +682,7 @@
                 <div>
                     <h4 class="text-white font-semibold mb-4">Legal</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="/privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
                         <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
                         <li><a href="#" class="hover:text-white transition">HIPAA Compliance</a></li>
                         <li><a href="#" class="hover:text-white transition">Security</a></li>
