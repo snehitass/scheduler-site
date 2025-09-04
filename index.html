@@ -60,7 +60,7 @@
                 <a href="#section-faq" class="hover:text-primary transition">FAQ</a>
             </div>
             <div class="flex items-center space-x-4">
-                <a href="#section-cta" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition">Get Started</a>
+                <!-- <a href="#section-cta" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition">Get Started</a> -->
                 <button id="mobile-menu-button" class="md:hidden text-gray-600">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
@@ -85,7 +85,7 @@
                 <h1 class="text-4xl md:text-5xl font-bold text-dark mb-4">Balanced Schedules for <span class="text-primary">Better Care</span></h1>
                 <p class="text-lg text-gray-600 mb-8">We’re launching with Emergency Medicine’s unique demands and expanding to every specialty — bringing fair, balanced scheduling to residents and attendings across healthcare.</p>
                 <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                    <a href="https://calendly.com/snehitasana/30min" target="_blank" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition text-center font-medium">Schedule a Call</a>
+                    <a href="https://calendar.app.google/KUd3xMDioxvPKhCF7" target="_blank" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition text-center font-medium">Schedule a Call</a>
                     <a href="#section-features" class="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-blue-50 transition text-center font-medium">Learn More</a>
                 </div>
                 <div class="mt-8 flex items-center space-x-2 text-gray-500">
@@ -496,86 +496,135 @@
     </section>
 
     <!-- CTA Section -->
-    <section id="section-cta" class="py-16 bg-primary text-white">
-        <div class="container mx-auto px-4 text-center">
-            
-            <h2 class="text-3xl font-bold mb-4">Ready to transform your scheduling?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">Join hundreds of medical programs using DocuSched to save time and reduce administrative headaches.</p>
-            <!-- <div class="max-w-md mx-auto bg-white rounded-lg p-1 shadow-lg">
-                <form class="flex flex-col sm:flex-row">
-                    <input type="email" placeholder="Enter your email" class="flex-grow px-4 py-3 rounded-lg focus:outline-none text-gray-800">
-                    <a href="https://calendly.com/snehitasana/30min" type="submit" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition mt-2 sm:mt-0 sm:ml-2">Start Free Trial</a>
-                </form>
-            </div> -->
-            <!-- COPY PASTE FROM WEB3 -->
-            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+    <!-- Contact (Formspree) -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-3xl mx-auto text-center px-6">
+            <h2 class="text-3xl font-bold text-dark mb-4">We'd love to hear from you!</h2>
+            <p class="text-gray-600">Whether you schedule, work the shifts, or are simply curious, we’d love your perspective.</p> 
+            <p class="text-gray-600">Drop us a note, and we'll get back to you within 24 hours!</p>
+            <form class="mt-6 space-y-4 md:mt-8" id="contactForm" action="https://formspree.io/f/xnnbgbyv" method="POST"
+                class="mx-auto max-w-xl space-y-4">
+            <input name="name" placeholder="Your name" required
+                    class="w-full rounded-xl border p-3 text-gray-900" />
+            <input type="email" name="email" placeholder="you@example.com" required
+                    class="w-full rounded-xl border p-3 text-gray-900" />
+            <textarea name="message" placeholder="How can we help?" rows="5" required
+                        class="w-full rounded-xl border p-3 text-gray-900"></textarea>
 
-                <!-- Replace with your Access Key -->
-                <input type="hidden" name="access_key" value="f3eefa75-b043-474c-a2ee-b5a565ef4adc">
+            <!-- Honeypot -->
+            <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off" />
 
-                <!-- Form Inputs. Each input must have a name="" attribute -->
-                <input type="text" name="name" required>
-                <input type="email" name="email" required>
-                <textarea name="message" required></textarea>
-
-                <!-- Honeypot Spam Protection -->
-                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-                <!-- Custom Confirmation / Success Page -->
-                <input type="hidden" name="redirect" value="https://www.equishift.ai">
-
-                <button id="submitBtn" type="submit">
-                    <span>Submit Form</span>
-                    <!-- spinner hidden by default -->
-                    <svg id="spinner" class="ml-2 hidden h-5 w-5 animate-spin" viewBox="0 0 24 24" fill="none">
-                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4A4 4 0 004 12z"></path>
-                    </svg>
-                </button>
-
+            <button id="submitBtn" type="submit"
+                    class="inline-flex items-center rounded-2xl bg-black px-5 py-3 text-white disabled:opacity-60">
+                <span>Send</span>
+                <svg id="spinner" class="ml-2 hidden h-5 w-5 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" d="M4 12a8 8 0 018-8v4A4 4 0 004 12z" fill="currentColor"></path>
+                </svg>
+            </button>
             </form>
-            <!-- <form action="https://api.web3forms.com/submit" method="POST" class="space-y-8">
-                <input type="hidden" name="access_key" value="f3eefa75-b043-474c-a2ee-b5a565ef4adc">
-                <input type="hidden" name="redirect" value="https://yourdomain.com/thanks">
-
-                <div>
-                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-                    <input type="email" name="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@gmail.com" required>
-                </div>
-                <div>
-                    <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
-                    <input type="text" name="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Let us know how we can help you" required>
-                </div>
-                <div class="sm:col-span-2">
-                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
-                    <textarea name="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..." required></textarea>
-                </div>
-                <input type="hidden" name="redirect" value="google.com">
-                <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
-            </form> -->
-            <p class="mt-4 text-blue-100">  </p>
-        </div>
-    <!-- Success Modal (hidden by default) -->
-        <div id="successModal" class="fixed inset-0 z-50 hidden items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
-            <!-- Backdrop -->
-            <div class="absolute inset-0 bg-black/50" data-close></div>
-
-            <!-- Panel -->
-            <div class="relative z-10 w-[92%] max-w-md scale-95 transform rounded-2xl bg-white p-6 opacity-0 shadow-xl transition-all">
-                <div class="flex items-start justify-between">
-                <h2 id="modal-title" class="text-lg font-semibold">Thanks—message sent!</h2>
-                <button type="button" class="ml-3 rounded-full p-2 hover:bg-gray-100" data-close aria-label="Close">✕</button>
-                </div>
-                <p id="modal-desc" class="mt-2 text-sm text-gray-600">We’ll get back to you shortly.</p>
-                <div class="mt-4 flex justify-end gap-2">
-                <button type="button" class="rounded-xl border px-4 py-2" data-close>Close</button>
-                <!-- OPTIONAL: redirect after modal -->
-                <a href="https://www.equishift.ai" class="rounded-xl bg-black px-4 py-2 text-white">Go to site</a>
-                </div>
-            </div>
+        <p class="mt-3 text-xs text-gray-500">
+            We’ll never share your contact info. Please don’t include PHI.
+        </p>
+           
         </div>
     </section>
 
+<!-- Success Modal (Tailwind) -->
+    <div id="successModal"
+        class="fixed inset-0 z-50 hidden flex items-center justify-center"
+        role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-black/50" data-close></div>
+
+    <!-- Panel -->
+    <div class="relative z-10 w-[92%] max-w-md rounded-2xl bg-white p-6 opacity-0 scale-95
+                shadow-xl transition-all duration-200">
+        <div class="flex items-start justify-between">
+        <h2 id="modal-title" class="text-lg font-semibold">Thank you for your message!</h2>
+        <button type="button" class="ml-3 rounded-full p-2 hover:bg-gray-100" data-close aria-label="Close">✕</button>
+        </div>
+        <p id="modal-desc" class="mt-2 text-sm text-gray-600">
+            Someone from our team will reach out to you shortly!
+        </p>
+        <div class="mt-4 flex justify-end gap-2">
+        <button type="button" class="rounded-xl border px-4 py-2" data-close>Close</button>
+        <!-- Optional: go somewhere after user closes -->
+        <!-- <a href="https://www.equishift.ai" class="rounded-xl bg-black px-4 py-2 text-white">Go to site</a> -->
+        </div>
+    </div>
+    </div>
+
+    <script>
+    (() => {
+    const THANK_YOU_URL = "https://www.equishift.ai/thanks"; // set if you want auto-redirect
+
+    const form = document.getElementById('contactForm');
+    const btn = document.getElementById('submitBtn');
+    const spinner = document.getElementById('spinner');
+    const modal = document.getElementById('successModal');
+    const panel = modal.querySelector('.bg-white');
+
+    function openModal() {
+        modal.classList.remove('hidden');
+        requestAnimationFrame(() => {
+        panel.classList.remove('opacity-0','scale-95');
+        panel.classList.add('opacity-100','scale-100');
+        });
+        document.addEventListener('keydown', onEsc);
+    }
+    function closeModal() {
+        panel.classList.add('opacity-0','scale-95');
+        panel.classList.remove('opacity-100','scale-100');
+        setTimeout(() => modal.classList.add('hidden'), 150);
+        document.removeEventListener('keydown', onEsc);
+    }
+    function onEsc(e){ if (e.key === 'Escape') closeModal(); }
+
+    // Close by clicking backdrop or any [data-close]
+    modal.addEventListener('click', (e) => {
+        if (e.target.matches('[data-close], [data-close] * , .bg-black\\/50')) {
+        closeModal();
+        // Optional redirect after close:
+        // window.location.href = THANK_YOU_URL;
+        }
+    });
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Tailwind-y loading state
+        btn.disabled = true;
+        spinner.classList.remove('hidden');
+
+        try {
+        // Important: Formspree + FormData (no manual Content-Type)
+        const resp = await fetch(form.action, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: new FormData(form)
+        });
+
+        if (!resp.ok) {
+            const err = await resp.json().catch(() => ({}));
+            throw new Error(err?.errors?.[0]?.message || 'Submission failed');
+        }
+
+        form.reset();
+        openModal();
+
+        // Option A: auto-redirect after a short delay (uncomment to use)
+        // setTimeout(() => { window.location.href = THANK_YOU_URL; }, 1800);
+
+        } catch (err) {
+        alert(err.message || 'Something went wrong. Please try again.');
+        } finally {
+        btn.disabled = false;
+        spinner.classList.add('hidden');
+        }
+    });
+    })();
+    </script>
 
 
 
@@ -593,9 +642,9 @@
                     </div>
                     <p class="mb-4">Smart scheduling solutions for medical education programs.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook"></i></a>
+                        <!-- <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a> -->
+                        <a href="https://www.linkedin.com/company/equishiftai/about/?viewAsMember=true" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                        <!-- <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook"></i></a> -->
                     </div>
                 </div>
                 <div>
@@ -627,7 +676,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2023 DocuSched. All rights reserved.</p>
+                <!-- <p>&copy; 2023 DocuSched. All rights reserved.</p> -->
             </div>
         </div>
     </footer>
