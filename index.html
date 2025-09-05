@@ -10,6 +10,18 @@
         gtag('config', 'G-XHLVMBMSS8');
     </script>
 
+    <link rel="preconnect" href="https://assets.calendly.com" crossorigin>
+    <link rel="preconnect" href="https://calendly.com" crossorigin>
+    <link rel="dns-prefetch" href="//assets.calendly.com">
+    <link rel="dns-prefetch" href="//calendly.com">
+
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+
+ 
+
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EquiShift | Smart Scheduling for Medical Professionals</title>
@@ -95,18 +107,9 @@
                 <h1 class="text-4xl md:text-5xl font-bold text-dark mb-4">Balanced Schedules for <span class="text-primary">Better Care</span></h1>
                 <p class="text-lg text-gray-600 mb-8">We’re launching with Emergency Medicine’s unique demands and expanding to every specialty — bringing fair, balanced scheduling to residents and attendings across healthcare.</p>
                 <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                    <!-- Calendly link widget begin -->
-                    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-                    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-
-                    <a href="" 
-                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/snehita-equishift/30min'});return false;"
-                    class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition text-center font-medium">
-                    Schedule a Call
+                    <a href="#" class="calendly-btn bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md">
+                    Schedule a 15-Minute Call
                     </a>
-                    <!-- Calendly link widget end -->
-
-                    <!-- <a href="https://calendar.app.google/KUd3xMDioxvPKhCF7" target="_blank" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition text-center font-medium">Schedule a Call</a> -->
                     <a href="#section-features" class="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-blue-50 transition text-center font-medium">Learn More</a>
                 </div>
                 <div class="mt-8 flex items-center space-x-2 text-gray-500">
@@ -438,15 +441,11 @@
             — starting with a free trial so you can see the value before committing.
             </p>
 
-            <!-- Calendly link widget begin -->
-            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-
-            <a href="" 
-            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/snehita-equishift/30min'});return false;"
-            class="mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md">
+            <a href="#" class="calendly-btn mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md">
             Schedule a 15-Minute Call
             </a>
+
+
             <!-- Calendly link widget end -->
 
         </div>
@@ -708,6 +707,68 @@
             </div>
         </div>
     </footer>
+
+    <!-- Optional tiny preload container (speeds up first open) -->
+    <div id="cal-preload" style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;"></div>
+
+    <script>
+    const CAL_URL = 'https://calendly.com/snehita-equishift/20min';
+    const CAL_SCRIPT_SRC = 'https://assets.calendly.com/assets/external/widget.js';
+
+    // Dynamically load Calendly JS (only once)
+    function ensureCalendlyLoaded(onReady) {
+        if (window.Calendly) { onReady(); return; }
+        // Already loading?
+        const existing = document.getElementById('calendly-js');
+        if (existing) {
+        const wait = setInterval(() => {
+            if (window.Calendly) { clearInterval(wait); onReady(); }
+        }, 120);
+        return;
+        }
+        // Start loading
+        const s = document.createElement('script');
+        s.id = 'calendly-js';
+        s.src = CAL_SCRIPT_SRC;
+        s.async = true;
+        s.onload = onReady;
+        s.onerror = () => console.warn('Calendly script failed to load. Check network/CSP.');
+        document.head.appendChild(s);
+    }
+
+    // Open popup (waits for Calendly if needed)
+    function openCalendlyPopup() {
+        ensureCalendlyLoaded(() => {
+        try {
+            window.Calendly.initPopupWidget({ url: CAL_URL });
+        } catch (e) {
+            console.error('Calendly init failed:', e);
+        }
+        });
+    }
+
+    // Optional: warm cache after load with a hidden inline widget (faster first click)
+    window.addEventListener('load', () => {
+        ensureCalendlyLoaded(() => {
+        const parent = document.getElementById('cal-preload');
+        if (parent && window.Calendly?.initInlineWidget) {
+            window.Calendly.initInlineWidget({ url: CAL_URL, parentElement: parent });
+            setTimeout(() => parent.remove(), 3000);
+        }
+        });
+    });
+
+    // Delegate clicks for any .calendly-btn
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.calendly-btn');
+        if (!btn) return;
+        e.preventDefault();
+        openCalendlyPopup();
+    });
+    </script>
+
+
+
 
     <script>
     (() => {
