@@ -70,65 +70,102 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="font-sans text-gray-800 bg-white">
-    <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            
+            <!-- Left: Logo -->
             <div class="flex items-center space-x-2">
-                <a href="#section-hero">
-                <img class="h-[75px] w-auto" src="/plain-logo-1.svg" alt="image"/>
-                <a href="#section-hero" class="text-2xl font-bold text-dark">EquiShift</a>
+            <a href="#section-hero">
+                <img class="h-[75px] w-auto" src="/plain-logo-1.svg" alt="EquiShift logo"/>
+            </a>
+            <a href="#section-hero" class="text-2xl font-bold text-dark">EquiShift</a>
             </div>
+            
+            <!-- Right: Nav links + mobile menu -->
+            <div class="flex items-center space-x-6">
             <div class="hidden md:flex space-x-8">
                 <a href="#section-features" class="hover:text-primary transition">Features</a>
                 <a href="#section-how-it-works" class="hover:text-primary transition">How It Works</a>
                 <a href="#section-pricing" class="hover:text-primary transition">Pricing</a>
                 <a href="#section-faq" class="hover:text-primary transition">FAQ</a>
+                <a href="#section-contact" class="hover:text-primary transition">Contact Us</a>
             </div>
-            <div class="flex items-center space-x-4">
-                <!-- <a href="#section-cta" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition">Get Started</a> -->
-                <button id="mobile-menu-button" class="md:hidden text-gray-600">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
             </div>
+            
         </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="container mx-auto py-2 px-4 flex flex-col space-y-3">
-                <a href="#section-features" class="py-2 hover:text-primary transition">Features</a>
-                <a href="#section-how-it-works" class="py-2 hover:text-primary transition">How It Works</a>
-                <a href="#section-pricing" class="py-2 hover:text-primary transition">Pricing</a>
-                <a href="#section-faq" class="py-2 hover:text-primary transition">FAQ</a>
-            </div>
+      <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+        <div class="container mx-auto py-2 px-4 flex flex-col space-y-3">
+        <a href="#section-features" class="py-2 hover:text-primary transition">Features</a>
+        <a href="#section-how-it-works" class="py-2 hover:text-primary transition">How It Works</a>
+        <a href="#section-pricing" class="py-2 hover:text-primary transition">Pricing</a>
+        <a href="#section-faq" class="py-2 hover:text-primary transition">FAQ</a>
+        <a href="#section-contact" class="hover:text-primary transition">Contact Us</a>
         </div>
+    </div>
     </nav>
 
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+    <div class="container mx-auto py-2 px-4 flex flex-col space-y-3">
+      <a href="#section-features" class="py-2 hover:text-primary transition">Features</a>
+      <a href="#section-how-it-works" class="py-2 hover:text-primary transition">How It Works</a>
+      <a href="#section-pricing" class="py-2 hover:text-primary transition">Pricing</a>
+      <a href="#section-faq" class="py-2 hover:text-primary transition">FAQ</a>
+    </div>
+  </div>
+
+
     <!-- Hero Section -->
-    <section id="section-hero" class="bg-gradient-to-r from-blue-50 to-indigo-50 py-16 md:py-24">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
-                <div class="inline-block bg-blue-100 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">Currently for Emergency Medicine</div>
-                <h1 class="text-4xl md:text-5xl font-bold text-dark mb-4">Balanced Schedules for <span class="text-primary">Better Care</span></h1>
-                <p class="text-lg text-gray-600 mb-8">We’re launching with Emergency Medicine’s unique demands and expanding to every specialty — bringing fair, balanced scheduling to residents and attendings across healthcare.</p>
-                <div class="mt-8 flex flex-col sm:flex-row gap-4">
-                    <a href="#" class="calendly-btn inline-flex items-center justify-center h-12 px-6
-           rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-md
-           whitespace-nowrap">
-                    Schedule a 15-Minute Call
-                    </a>
-                    <a href="#section-features" class="inline-flex items-center justify-center h-12 px-6
-           rounded-xl border-2 border-blue-600 text-blue-600 font-semibold
-           hover:bg-blue-300 whitespace-nowrap">Learn More</a>
-                </div>
-                <div class="mt-8 flex items-center space-x-2 text-gray-500">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>HIPAA Compliant</span>
-                </div>
-            </div>
-            <div class="md:w-1/2 fade-in">
-                <img src="/circle-surgeons.jpg" alt="Doctor using digital tablet in hospital" class="rounded-xl shadow-lg w-full">
-            </div>
+    <section id="section-hero" class="bg-gradient-to-r from-blue-50 to-indigo-50 px-6 md:py-24">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-[1.3fr_.7fr] gap-10 items-center">
+        
+        <!-- Left: text -->
+        <div class="max-w-2xl">
+        <span class="inline-block mb-5 px-3 py-1 text-sm font-medium text-blue-700 bg-blue-100 rounded-full">
+            Currently for Emergency Medicine
+        </span>
+
+        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.05] mb-5 text-slate-900">
+            Other platforms give you tools.
+        </h1>
+        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.05] mb-5 text-blue-600">
+            We deliver results.
+        </h1>
+
+        <p class="text-lg text-slate-700 leading-relaxed mb-7 max-w-prose">
+            We handle scheduling end-to-end — cutting admin hours and delivering fair, 
+            circadian-friendly schedules that optimize clinical coverage for residents and attendings, 
+            so your team spends less time in spreadsheets and more time with patients.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3">
+            <a href="#"
+            class="calendly-btn inline-flex items-center justify-center h-12 px-6 rounded-xl
+                    bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-md whitespace-nowrap">
+            Schedule a 20-Minute Call
+            </a>
+            <a href="#section-features"
+            class="inline-flex items-center justify-center h-12 px-6 rounded-xl
+                    border-2 border-blue-600 text-blue-600 font-semibold hover:bg-blue-50 whitespace-nowrap">
+            Learn More
+            </a>
         </div>
+
+        </div>
+
+        <!-- Right: image (contained) -->
+        <div class="justify-self-end">
+        <img src="/circle-surgeons.jpg" alt="Emergency team"
+            class="rounded-2xl shadow-xl w-full h-auto aspect-[5/3] object-cover" />
+        </div>
+
+    </div>
     </section>
+
 
     <!-- Trust Indicators -->
     <!-- <section class="bg-white py-8 border-b">
@@ -166,13 +203,7 @@
                     <h3 class="text-xl font-semibold mb-2">Time Savings</h3>
                     <p class="text-gray-600">Reduce scheduling admin time by 95% with our intelligent algorithms that account for shifts, coverage, and preferences.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-user-md text-primary text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Resident & Physician Well-Being</h3>
-                    <p class="text-gray-600">Built for ACGME duty hour compliance, circadian rhythm–friendly shifts, and seamless vacation coverage—ensuring fair, balanced schedules for you and your colleagues.</p>
-                </div>
+
                 <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
                     <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-shield-alt text-primary text-xl"></i>
@@ -180,24 +211,33 @@
                     <h3 class="text-xl font-semibold mb-2">Effortless and Flexible</h3>
                     <p class="text-gray-600">Delivered as a service—no new software to learn. Last-minute changes are easily accommodated, keeping schedules accurate without the hassle.</p>
                 </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-user-md text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Resident & Physician Well-Being</h3>
+                    <p class="text-gray-600">Built for ACGME duty hour compliance, circadian rhythm–friendly shifts, and seamless vacation coverage—ensuring fair, balanced schedules for you and your colleagues.</p>
+                </div>
+                
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="section-features" class="py-16 bg-white">
+        <section id="section-features" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <h2 class="text-3xl font-bold text-dark mb-4">Powerful Features</h2>
-                <p class="text-gray-600">Everything you need to manage complex medical schedules efficiently.</p>
+                <p class="text-gray-600">
+                    Everything you need to manage complex medical schedules efficiently.
+                </p>
             </div>
-            <div class="flex flex-col md:flex-row items-center mb-16">
-                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                    <img src="/radiologist.jpg" alt="Calendar interface on tablet" class="rounded-xl shadow-lg w-full">
-                </div>
-                <div class="md:w-1/2">
-                    <h3 class="text-2xl font-semibold mb-4">Fair & Wellness-Focused Scheduling</h3>
-                    <!-- <p class="text-gray-600 mb-4">Our algorithm considers dozens of factors to create optimal schedules:</p> -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <h3 class="text-xl font-semibold">Fair & Wellness-Focused Scheduling</h3>
+                    </div>
                     <ul class="space-y-3">
                         <li class="flex items-start">
                             <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
@@ -215,38 +255,67 @@
                             <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
                             <span><span class="font-bold">Clear visibility</span> into whether requirements are being met</span>
                         </li>
-                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4">3</div>
+                        <h3 class="text-xl font-semibold">You Stay in Control</h3>
+                    </div>
+                    <p class="text-gray-600">Review the draft, suggest adjustments if needed, and give final approval.
+                        And if your needs change mid-month, that's okay—we'll update the schedule for you.</p>
                 </div>
             </div>
-            <div class="flex flex-col md:flex-row-reverse items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
-                    <img src="/stethoscope-laptop.jpg" alt="Team of doctors discussing" class="rounded-xl shadow-lg w-full">
-                </div>
-                <div class="md:w-1/2">
-                    <h3 class="text-2xl font-semibold mb-4">Service, Not Software</h3>
-                    <!-- <p class="text-gray-600 mb-4">Built for the entire care team to work together:</p> -->
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
-                            <span><span class="font-bold">We build the schedule</span> — you just log in to see it</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
-                            <span><span class="font-bold">Simple interface</span> residents and attendings can use instantly</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
-                            <span><span class="font-bold">Last-minute changes handled</span> to keep schedules accurate</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
-                            <span><span class="font-bold">Always up to date</span> with real-time access anywhere</span>
-                        </li>
-                    </ul>
-                </div>
+<!-- 
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+ 
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Fair & Wellness-Focused Scheduling</h3>
+                <ul class="space-y-3">
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                    <span><span class="font-bold">ACGME duty-hour compliance</span> automatically tracked</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                    <span><span class="font-bold">Balanced shifts</span> that honor circadian rhythms and protect wellness</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                    <span><span class="font-bold">Schedules built for your team</span> covering all shifts and vacation requests</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                    <span><span class="font-bold">Clear visibility</span> into whether requirements are being met</span>
+                </li>
+                </ul>
             </div>
+
+
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Service, Not Software</h3>
+                <ul class="space-y-3">
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                    <span><span class="font-bold">We build the schedule</span> — you just log in to see it</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                    <span><span class="font-bold">Simple interface</span> residents and attendings can use instantly</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                    <span><span class="font-bold">Last-minute changes handled</span> to keep schedules accurate</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                    <span><span class="font-bold">Always up to date</span> with real-time access anywhere</span>
+                </li>
+                </ul>
+            </div>
+            </div> -->
         </div>
-    </section>
+        </section>
+
 
     <!-- How It Works Section -->
     <section id="section-how-it-works" class="py-16 bg-gray-50">
@@ -439,7 +508,7 @@
         </div>
     </section> -->
 
-    <section class="bg-gray-50 py-16">
+    <section id="section-pricing" class="bg-gray-50 py-16">
         <div class="max-w-3xl mx-auto text-center px-6">
             <h2 class="text-3xl font-bold text-gray-900">Simple, Flexible Pricing</h2>
             <p class="mt-3 text-lg text-gray-600">
@@ -449,11 +518,9 @@
             </p>
 
             <a href="#" class="calendly-btn mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md">
-            Schedule a 15-Minute Call
+            Schedule a 20-Minute Call
             </a>
 
-
-            <!-- Calendly link widget end -->
 
         </div>
     </section>
@@ -527,7 +594,7 @@
 
     <!-- CTA Section -->
     <!-- Contact (Formspree) -->
-    <section class="bg-gray-50 py-16">
+    <section id="section-contact" class="bg-gray-50 py-16">
         <div class="max-w-3xl mx-auto text-center px-6">
             <h2 class="text-3xl font-bold text-dark mb-4">We'd love to hear from you!</h2>
             <p class="text-gray-600">Whether you schedule, work the shifts, or are simply curious, we’d love your perspective.</p> 
@@ -662,58 +729,42 @@
     
 
     <!-- Footer -->
-    <footer class="bg-dark text-gray-300 py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <a href="#section-hero" class="text-2xl font-bold text-white">
-                            <img class="h-[75px] w-auto" src="/darker-logo.png" alt="image"/>
-                        </a>
-                        <a href="#section-hero" class="text-2xl font-bold text-white">EquiShift</a>
-                        <!-- <i class="fas fa-calendar-check text-primary text-2xl"></i>
-                        <span class="text-xl font-bold text-white">DocuSched</span> -->
-                    </div>
-                    <p class="mb-4">Smart scheduling solutions for medical education programs.</p>
-                    <div class="flex space-x-4">
-                        <!-- <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a> -->
-                        <a href="https://www.linkedin.com/company/equishiftai/about/?viewAsMember=true" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
-                        <!-- <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook"></i></a> -->
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Product</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#section-features" class="hover:text-white transition">Features</a></li>
-                        <li><a href="#section-pricing" class="hover:text-white transition">Pricing</a></li>
-                        <li><a href="#section-faq" class="hover:text-white transition">FAQ</a></li>
-                        <li><a href="#" class="hover:text-white transition">Demo</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Company</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
-                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Legal</h4>
-                    <ul class="space-y-2">
-                        <li><a href="/privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="/terms.html" class="hover:text-white transition">Terms of Service</a></li>
-                        <li><a href="#" class="hover:text-white transition">HIPAA Compliance</a></li>
-                        <li><a href="#" class="hover:text-white transition">Security</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <!-- <p>&copy; 2023 DocuSched. All rights reserved.</p> -->
-            </div>
-        </div>
-    </footer>
+<footer class="bg-slate-900 text-slate-200">
+  <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+    
+    <!-- Brand -->
+    <div>
+      <div class="flex items-center gap-3">
+        <img src="/plain-logo-1.svg" alt="EquiShift" class="h-8 w-auto">
+        <span class="text-xl font-semibold">EquiShift</span>
+      </div>
+      <p class="mt-2 text-slate-400 text-sm">
+        We handle the schedule, so your team can handle the patients.
+      </p>
+    </div>
+
+    <!-- Links -->
+    <nav class="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+      <a href="#section-features" class="hover:text-white">Features</a>
+      <a href="#section-pricing" class="hover:text-white">Pricing</a>
+      <a href="#section-contact" class="hover:text-white">Contact Us</a>
+      <a href="/privacy.html" class="hover:text-white">Privacy Policy</a>
+      <a href="/terms.html" class="hover:text-white">Terms of Service</a>
+    </nav>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="border-t border-slate-800 mt-6">
+    <div class="max-w-6xl mx-auto px-6 py-4 text-center text-xs text-slate-500">
+      © <span id="year"></span> EquiShift. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 
     <!-- Optional tiny preload container (speeds up first open) -->
     <div id="cal-preload" style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;"></div>
