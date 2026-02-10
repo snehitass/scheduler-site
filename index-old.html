@@ -1,0 +1,967 @@
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XHLVMBMSS8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XHLVMBMSS8');
+    </script>
+
+    <link rel="preconnect" href="https://assets.calendly.com" crossorigin>
+    <link rel="preconnect" href="https://calendly.com" crossorigin>
+    <link rel="dns-prefetch" href="//assets.calendly.com">
+    <link rel="dns-prefetch" href="//calendly.com">
+
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+
+ 
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EquiShift | Smart Scheduling for Medical Professionals</title>
+    <meta name="description" content="Streamline your medical practice with Equishift - the scheduling solution designed specifically for residents, attendings, and nurses.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#3b82f6',
+                        dark: '#1e293b',
+                        light: '#f8fafc'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+
+    </style>
+
+      <!-- Custom CSS for reusable classes -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="font-sans text-gray-800 bg-white">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            
+            <!-- Left: Logo -->
+            <div class="flex items-center space-x-2">
+            <a href="#section-hero">
+                <img class="h-[75px] w-auto" src="/plain-logo-1.svg" alt="EquiShift logo"/>
+            </a>
+            <a href="#section-hero" class="text-2xl font-bold text-dark">EquiShift</a>
+            </div>
+            
+            <!-- Right: Nav links + mobile menu -->
+            <div class="flex items-center space-x-6">
+            <div class="hidden md:flex space-x-8">
+                <a href="#section-features" class="hover:text-primary transition">Features</a>
+                <a href="#section-how-it-works" class="hover:text-primary transition">How It Works</a>
+                <a href="#section-pricing" class="hover:text-primary transition">Pricing</a>
+                <!-- <a href="#section-faq" class="hover:text-primary transition">FAQ</a> -->
+                <a href="#section-contact" class="hover:text-primary transition">Contact Us</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            </div>
+            
+        </div>
+      <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed left-0 right-0 top-[75px] bg-white border-t shadow-lg z-50">
+        <div class="container mx-auto py-2 px-4 flex flex-col space-y-3">
+        <a href="#section-features" class="py-2 hover:text-primary transition">Features</a>
+        <a href="#section-how-it-works" class="py-2 hover:text-primary transition">How It Works</a>
+        <a href="#section-pricing" class="py-2 hover:text-primary transition">Pricing</a>
+        <!-- <a href="#section-faq" class="py-2 hover:text-primary transition">FAQ</a> -->
+        <a href="#section-contact" class="hover:text-primary transition">Contact Us</a>
+        </div>
+    </div>
+    </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+    <div class="container mx-auto py-2 px-4 flex flex-col space-y-3">
+      <a href="#section-features" class="py-2 hover:text-primary transition">Features</a>
+      <a href="#section-how-it-works" class="py-2 hover:text-primary transition">How It Works</a>
+      <a href="#section-pricing" class="py-2 hover:text-primary transition">Pricing</a>
+      <!-- <a href="#section-faq" class="py-2 hover:text-primary transition">FAQ</a> -->
+    </div>
+  </div>
+
+
+    <!-- Hero Section -->
+    <section id="section-hero" class="bg-gradient-to-r from-blue-50 to-indigo-50 px-6 py-12 md:py-24">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-[1.3fr_.7fr] gap-10 items-center">
+        
+        <!-- Left: text -->
+        <div class="max-w-2xl">
+        <!-- <span class="inline-block mb-5 px-3 py-1 text-sm font-medium text-blue-700 bg-blue-100 rounded-full">
+            Currently for Emergency Medicine
+        </span> -->
+
+        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.05] mb-5 text-slate-900">
+            Other platforms give you tools.
+        </h1>
+        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.05] mb-5 text-blue-600">
+            We deliver results.
+        </h1>
+
+        <p class="text-lg text-slate-700 leading-relaxed mb-7 max-w-prose">
+            We handle scheduling end-to-end — cutting admin hours and delivering fair, 
+            circadian rhythm-friendly schedules that optimize clinical coverage for residents, attending, and nurses, 
+            so your team spends less time in spreadsheets and more time with patients.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3">
+            <a href="#"
+            class="calendly-btn inline-flex items-center justify-center h-12 px-6 rounded-xl
+                    bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-md whitespace-nowrap">
+            Schedule a 20-Minute Call
+            </a>
+            <a href="#section-features"
+            class="inline-flex items-center justify-center h-12 px-6 rounded-xl
+                    border-2 border-blue-600 text-blue-600 font-semibold hover:bg-blue-50 whitespace-nowrap">
+            Learn More
+            </a>
+        </div>
+
+        </div>
+
+        <!-- Right: image (contained) -->
+        <div class="justify-self-end">
+        <img src="/circle-surgeons.jpg" alt="Emergency team"
+            class="rounded-2xl shadow-xl w-full h-auto aspect-[3/3] object-cover" />
+        </div>
+
+    </div>
+    </section>
+
+
+    <!-- Trust Indicators -->
+    <!-- <section class="bg-white py-8 border-b">
+        <div class="container mx-auto px-4">
+            <p class="text-center text-gray-500 mb-6">Trusted by medical professionals at</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <div class="h-10 opacity-70">
+                    <img src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Hospital Logo" class="h-full object-contain">
+                </div>
+                <div class="h-10 opacity-70">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Medical Center Logo" class="h-full object-contain">
+                </div>
+                <div class="h-10 opacity-70">
+                    <img src="https://images.unsplash.com/photo-1573497019704-85b3431a0b71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Clinic Logo" class="h-full object-contain">
+                </div>
+                <div class="h-10 opacity-70">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="University Hospital Logo" class="h-full object-contain">
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Benefits Section -->
+    <section id="section-benefits" class="py-16 bg-gray-50 scroll-mt-20 md:scroll-mt-28">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-dark mb-4">Designed for Medical Workflows</h2>
+                <p class="text-gray-600">EquiShift understands the unique scheduling challenges in healthcare and provides specialized solutions.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-clock text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Time Savings</h3>
+                    <p class="text-gray-600">Reduce scheduling admin time by 95% with our intelligent algorithms that account for shifts, coverage, and preferences.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Effortless and Flexible</h3>
+                    <p class="text-gray-600">Delivered as a service—no new software to learn. Last-minute changes are easily accommodated, keeping schedules accurate without the hassle.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-user-md text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Well-Being</h3>
+                    <p class="text-gray-600">Built for ACGME duty hour compliance, circadian rhythm–friendly shifts, and seamless vacation coverage—ensuring fair, balanced schedules for you and your colleagues.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+        <section id="section-features" class="py-16 bg-white scroll-mt-20 md:scroll-mt-28">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-dark mb-4">Powerful Features</h2>
+                <p class="text-gray-600">
+                    Everything you need to manage complex medical schedules efficiently.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-blue-100 p-6 rounded-xl shadow-xl">
+                    <div class="flex items-center mb-4">
+                        <h3 class="text-xl font-semibold">Service, Not a Software</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span><span class="font-bold">We build the schedule</span> — you just log in to see it</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span><span class="font-bold">Simple interface</span> staff can use instantly</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span><span class="font-bold">Last-minute changes handled</span> to keep schedules accurate</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span><span class="font-bold">Always up to date</span> with real-time access anywhere</span>
+                        </li>
+                </div>
+                <div class="bg-blue-100 p-6 rounded-xl shadow-xl">
+                    <div class="flex items-center mb-4">
+                        <h3 class="text-xl font-semibold">Compliance and Coverage, Simplified</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span><span class="font-bold">ACGME duty-hour compliance</span> automatically tracked</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span><span class="font-bold">Clear visibility</span> into whether requirements are being met</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span><span class="font-bold">Request and approve trades</span> directly within the site</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span><span class="font-bold">Balanced schedules</span> that cover all shifts and vacation requests, and honor circadian rhythms
+                        and wellness</span>
+                        </li>
+
+                </div>
+                
+            </div>
+<!-- 
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+ 
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Fair & Wellness-Focused Scheduling</h3>
+                <ul class="space-y-3">
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                    <span><span class="font-bold">ACGME duty-hour compliance</span> automatically tracked</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                    <span><span class="font-bold">Balanced shifts</span> that honor circadian rhythms and protect wellness</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                    <span><span class="font-bold">Schedules built for your team</span> covering all shifts and vacation requests</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                    <span><span class="font-bold">Clear visibility</span> into whether requirements are being met</span>
+                </li>
+                </ul>
+            </div>
+
+
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Service, Not Software</h3>
+                <ul class="space-y-3">
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                    <span><span class="font-bold">We build the schedule</span> — you just log in to see it</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                    <span><span class="font-bold">Simple interface</span> residents and attendings can use instantly</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                    <span><span class="font-bold">Last-minute changes handled</span> to keep schedules accurate</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                    <span><span class="font-bold">Always up to date</span> with real-time access anywhere</span>
+                </li>
+                </ul>
+            </div>
+            </div> -->
+        </div>
+        </section>
+
+
+    <!-- How It Works Section -->
+    <section id="section-how-it-works" class="py-16 bg-gray-50 scroll-mt-20 md:scroll-mt-28">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-dark mb-4">Your Program, Your Rules</h2>
+                <p class="text-gray-600">Here's how EquiShift works!</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4">1</div>
+                        <h3 class="text-xl font-semibold">Give Us Your Rules</h3>
+                    </div>
+                    <p class="text-gray-600">Take 10 minutes to share your monthly lineup— clinical staff, shift coverage needs, plus vacation requests and preferences.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4">2</div>
+                        <h3 class="text-xl font-semibold">We Do the Work</h3>
+                    </div>
+                    <p class="text-gray-600">We create a balanced, compliant schedule that covers all shifts while honoring requests—handling 95% of the workload.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4">3</div>
+                        <h3 class="text-xl font-semibold">You Stay in Control</h3>
+                    </div>
+                    <p class="text-gray-600">Review the draft, suggest adjustments if needed, and give final approval.
+                        And if your needs change mid-month, that's okay—we'll update the schedule for you.</p>
+                </div>
+            </div>
+            <!-- <div class="mt-12 text-center">
+                <a href="#section-cta" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition inline-block">Start Your Free Trial</a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <!-- <section id="section-social-proof" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-dark mb-4">Trusted by Medical Educators</h2>
+                <p class="text-gray-600">Hear what program directors and residents say about DocuSched.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Dr. Sarah Johnson" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Dr. Sarah Johnson</h4>
+                            <p class="text-gray-500 text-sm">Program Director, Internal Medicine</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"DocuSched has transformed our residency program. What used to take me 20 hours per month now takes less than 2. The automatic compliance tracking alone is worth the investment."</p>
+                    <div class="mt-4 flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Dr. Michael Chen" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Dr. Michael Chen</h4>
+                            <p class="text-gray-500 text-sm">Chief Resident, Surgery</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"As chief resident, DocuSched has been a lifesaver. The swap request system is so easy to use, and I love that it automatically checks duty hours before approving any changes."</p>
+                    <div class="mt-4 flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Pricing Section -->
+    <!-- <section id="section-pricing" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-dark mb-4">Simple, Transparent Pricing</h2>
+                <p class="text-gray-600">Choose the plan that fits your program's needs.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                    <h3 class="text-xl font-semibold mb-2">Residency Program</h3>
+                    <p class="text-gray-600 mb-6">For individual residency programs</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-dark">$299</span>
+                        <span class="text-gray-500">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                            <span>Up to 50 residents</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                            <span>Unlimited attendings</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                            <span>Basic reporting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                            <span>Email support</span>
+                        </li>
+                    </ul>
+                    <a href="#section-cta" class="block w-full bg-primary text-white text-center py-3 rounded-lg hover:bg-secondary transition">Get Started</a>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-primary relative">
+                    <div class="absolute top-0 right-0 bg-primary text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">Most Popular</div>
+                    <h3 class="text-xl font-semibold mb-2">Department</h3>
+                    <p class="text-gray-600 mb-6">For entire departments with multiple programs</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-dark">$799</span>
+                        <span class="text-gray-500">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                            <span>Up to 200 residents</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                            <span>Unlimited attendings</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                            <span>Advanced analytics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                            <span>Priority support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                            <span>EMR integration</span>
+                        </li>
+                    </ul>
+                    <a href="#section-cta" class="block w-full bg-primary text-white text-center py-3 rounded-lg hover:bg-secondary transition">Get Started</a>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                    <h3 class="text-xl font-semibold mb-2">Enterprise</h3>
+                    <p class="text-gray-600 mb-6">For large healthcare systems</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-dark">Custom</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                            <span>Unlimited residents</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                            <span>Unlimited attendings</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                            <span>Custom reporting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                            <span>Dedicated account manager</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                            <span>API access</span>
+                        </li>
+                    </ul>
+                    <a href="#section-cta" class="block w-full bg-primary text-white text-center py-3 rounded-lg hover:bg-secondary transition">Contact Sales</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-500">
+                <p></p>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="section-pricing" class="bg-white py-16 scroll-mt-20 md:scroll-mt-28">
+        <div class="max-w-3xl mx-auto text-center px-6">
+            <h2 class="text-3xl font-bold text-gray-900">Simple, Flexible Pricing</h2>
+            <p class="mt-3 text-lg text-gray-600">
+            Every program is unique. Pricing is tailored to your clinical staff size, and scheduling needs. 
+            Let's walk through your budget together and design a plan that works for you 
+            — starting with a free trial so you can see the value before committing.
+            </p>
+
+            <a href="#" class="calendly-btn mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md">
+            Schedule a 20-Minute Call
+            </a>
+
+
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <!-- <section id="section-faq" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-dark mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600">Find answers to common questions about EquiShift</p>
+            </div>
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-4 hover:bg-gray-50 transition">
+                        <span class="text-lg font-medium text-left">Is EquiShift HIPAA compliant?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="pb-4 text-gray-600">
+                            <p>Yes, EquiShift is fully HIPAA compliant. We sign Business Associate Agreements (BAAs) with all our healthcare customers and implement strict security measures including data encryption, access controls, and audit logging to protect patient and provider information.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-4 hover:bg-gray-50 transition">
+                        <span class="text-lg font-medium text-left">How does the scheduling algorithm work?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="pb-4 text-gray-600">
+                            <p>Our algorithm considers multiple variables including resident level, rotation requirements, ACGME duty hour rules, individual preferences, historical assignments, and program-specific rules to create fair, balanced schedules. You can adjust the weighting of different factors to match your program's priorities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-4 hover:bg-gray-50 transition">
+                        <span class="text-lg font-medium text-left">Can we integrate with our existing EMR?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="pb-4 text-gray-600">
+                            <p>DocuSched offers integrations with most major EMR systems including Epic, Cerner, and Meditech. Our enterprise plan includes pre-built connectors, while other plans can access these integrations for an additional fee. We work closely with your IT team to ensure a smooth implementation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-4 hover:bg-gray-50 transition">
+                        <span class="text-lg font-medium text-left">What's included in the free trial?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="pb-4 text-gray-600">
+                            <p>The 14-day free trial gives you full access to all features of the Residency Program plan. You can add your residents and attendings, set up your program rules, generate sample schedules, and test all functionality. No credit card is required to start your trial.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-4 hover:bg-gray-50 transition">
+                        <span class="text-lg font-medium text-left">How is support handled?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="pb-4 text-gray-600">
+                            <p>All plans include email support with a 24-hour response time. Department and Enterprise plans receive priority support with faster response times. Enterprise customers get a dedicated account manager and optional training sessions for your team. We also offer comprehensive documentation and video tutorials for all users.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- CTA Section -->
+    <!-- Contact (Formspree) -->
+    <section id="section-contact" class="bg-gray-50 py-16 scroll-mt-20 md:scroll-mt-28">
+        <div class="max-w-3xl mx-auto text-center px-6">
+            <h2 class="text-3xl font-bold text-dark mb-4">We'd love to hear from you!</h2>
+            <p class="text-gray-600">Whether you schedule, work the shifts, or are simply curious, we’d love your perspective.</p> 
+            <p class="text-gray-600">Drop us a note, and we'll get back to you within 24 hours!</p>
+            <form class="mt-6 space-y-4 md:mt-8" id="contactForm" action="https://formspree.io/f/xnnbgbyv" method="POST"
+                class="mx-auto max-w-xl space-y-4">
+            <input name="name" placeholder="Your name" required
+                    class="w-full rounded-xl border p-3 text-gray-900" />
+            <input type="email" name="email" placeholder="you@example.com" required
+                    class="w-full rounded-xl border p-3 text-gray-900" />
+            <textarea name="message" placeholder="How can we help?" rows="5" required
+                        class="w-full rounded-xl border p-3 text-gray-900"></textarea>
+
+            <!-- Honeypot -->
+            <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off" />
+
+            <button id="submitBtn" type="submit"
+                    class="inline-flex items-center rounded-2xl bg-black px-5 py-3 text-white disabled:opacity-60">
+                <span>Send</span>
+                <svg id="spinner" class="ml-2 hidden h-5 w-5 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" d="M4 12a8 8 0 018-8v4A4 4 0 004 12z" fill="currentColor"></path>
+                </svg>
+            </button>
+            </form>
+        <p class="mt-3 text-xs text-gray-500">
+            We’ll never share your contact info. Please don’t include PHI.
+        </p>
+           
+        </div>
+    </section>
+
+<!-- Success Modal (Tailwind) -->
+    <div id="successModal"
+        class="fixed inset-0 z-50 hidden flex items-center justify-center"
+        role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-black/50" data-close></div>
+
+    <!-- Panel -->
+    <div class="relative z-10 w-[92%] max-w-md rounded-2xl bg-white p-6 opacity-0 scale-95
+                shadow-xl transition-all duration-200">
+        <div class="flex items-start justify-between">
+        <h2 id="modal-title" class="text-lg font-semibold">Thank you for your message!</h2>
+        <button type="button" class="ml-3 rounded-full p-2 hover:bg-gray-100" data-close aria-label="Close">✕</button>
+        </div>
+        <p id="modal-desc" class="mt-2 text-sm text-gray-600">
+            Someone from our team will reach out to you shortly!
+        </p>
+        <div class="mt-4 flex justify-end gap-2">
+        <button type="button" class="rounded-xl border px-4 py-2" data-close>Close</button>
+        <!-- Optional: go somewhere after user closes -->
+        <!-- <a href="https://www.equishift.ai" class="rounded-xl bg-black px-4 py-2 text-white">Go to site</a> -->
+        </div>
+    </div>
+    </div>
+
+    <script>
+    (() => {
+    const THANK_YOU_URL = "https://www.equishift.ai/thanks"; // set if you want auto-redirect
+
+    const form = document.getElementById('contactForm');
+    const btn = document.getElementById('submitBtn');
+    const spinner = document.getElementById('spinner');
+    const modal = document.getElementById('successModal');
+    const panel = modal.querySelector('.bg-white');
+
+    function openModal() {
+        modal.classList.remove('hidden');
+        requestAnimationFrame(() => {
+        panel.classList.remove('opacity-0','scale-95');
+        panel.classList.add('opacity-100','scale-100');
+        });
+        document.addEventListener('keydown', onEsc);
+    }
+    function closeModal() {
+        panel.classList.add('opacity-0','scale-95');
+        panel.classList.remove('opacity-100','scale-100');
+        setTimeout(() => modal.classList.add('hidden'), 150);
+        document.removeEventListener('keydown', onEsc);
+    }
+    function onEsc(e){ if (e.key === 'Escape') closeModal(); }
+
+    // Close by clicking backdrop or any [data-close]
+    modal.addEventListener('click', (e) => {
+        if (e.target.matches('[data-close], [data-close] * , .bg-black\\/50')) {
+        closeModal();
+        // Optional redirect after close:
+        // window.location.href = THANK_YOU_URL;
+        }
+    });
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Tailwind-y loading state
+        btn.disabled = true;
+        spinner.classList.remove('hidden');
+
+        try {
+        // Important: Formspree + FormData (no manual Content-Type)
+        const resp = await fetch(form.action, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: new FormData(form)
+        });
+
+        if (!resp.ok) {
+            const err = await resp.json().catch(() => ({}));
+            throw new Error(err?.errors?.[0]?.message || 'Submission failed');
+        }
+
+        form.reset();
+        openModal();
+
+        // Option A: auto-redirect after a short delay (uncomment to use)
+        // setTimeout(() => { window.location.href = THANK_YOU_URL; }, 1800);
+
+        } catch (err) {
+        alert(err.message || 'Something went wrong. Please try again.');
+        } finally {
+        btn.disabled = false;
+        spinner.classList.add('hidden');
+        }
+    });
+    })();
+    </script>
+
+
+
+
+    
+
+    <!-- Footer -->
+<footer class="bg-slate-900 text-slate-200">
+  <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+    
+    <!-- Brand -->
+    <div>
+      <div class="flex items-center gap-3">
+        <img src="/plain-logo-1.svg" alt="EquiShift" class="h-8 w-auto">
+        <span class="text-xl font-semibold">EquiShift</span>
+      </div>
+      <p class="mt-2 text-slate-400 text-sm">
+        We handle the schedule, so your team can handle the patients.
+      </p>
+    </div>
+
+    <!-- Links -->
+    <nav class="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+      <a href="#section-features" class="hover:text-white">Features</a>
+      <a href="#section-pricing" class="hover:text-white">Pricing</a>
+      <a href="#section-contact" class="hover:text-white">Contact Us</a>
+      <a href="/privacy.html" class="hover:text-white">Privacy Policy</a>
+      <a href="/terms.html" class="hover:text-white">Terms of Service</a>
+    </nav>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="border-t border-slate-800 mt-6">
+    <div class="max-w-6xl mx-auto px-6 py-4 text-center text-xs text-slate-500">
+      © <span id="year"></span> EquiShift. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+
+    <!-- Optional tiny preload container (speeds up first open) -->
+    <div id="cal-preload" style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;"></div>
+
+    <script>
+    const CAL_URL = 'https://calendly.com/snehita-equishift/20min';
+    const CAL_SCRIPT_SRC = 'https://assets.calendly.com/assets/external/widget.js';
+
+    // Dynamically load Calendly JS (only once)
+    function ensureCalendlyLoaded(onReady) {
+        if (window.Calendly) { onReady(); return; }
+        // Already loading?
+        const existing = document.getElementById('calendly-js');
+        if (existing) {
+        const wait = setInterval(() => {
+            if (window.Calendly) { clearInterval(wait); onReady(); }
+        }, 120);
+        return;
+        }
+        // Start loading
+        const s = document.createElement('script');
+        s.id = 'calendly-js';
+        s.src = CAL_SCRIPT_SRC;
+        s.async = true;
+        s.onload = onReady;
+        s.onerror = () => console.warn('Calendly script failed to load. Check network/CSP.');
+        document.head.appendChild(s);
+    }
+
+    // Open popup (waits for Calendly if needed)
+    function openCalendlyPopup() {
+        ensureCalendlyLoaded(() => {
+        try {
+            window.Calendly.initPopupWidget({ url: CAL_URL });
+        } catch (e) {
+            console.error('Calendly init failed:', e);
+        }
+        });
+    }
+
+    // Optional: warm cache after load with a hidden inline widget (faster first click)
+    window.addEventListener('load', () => {
+        ensureCalendlyLoaded(() => {
+        const parent = document.getElementById('cal-preload');
+        if (parent && window.Calendly?.initInlineWidget) {
+            window.Calendly.initInlineWidget({ url: CAL_URL, parentElement: parent });
+            setTimeout(() => parent.remove(), 3000);
+        }
+        });
+    });
+
+    // Delegate clicks for any .calendly-btn
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.calendly-btn');
+        if (!btn) return;
+        e.preventDefault();
+        openCalendlyPopup();
+    });
+    </script>
+
+
+
+
+    <script>
+    (() => {
+    const form = document.getElementById('contactForm');
+    const btn = document.getElementById('submitBtn');
+    const spinner = document.getElementById('spinner');
+    const modal = document.getElementById('successModal');
+    const panel = modal.querySelector('.bg-white');
+
+    function openModal() {
+        modal.classList.remove('hidden');
+        requestAnimationFrame(() => {
+        panel.classList.remove('opacity-0','scale-95');
+        panel.classList.add('opacity-100','scale-100');
+        });
+        document.addEventListener('keydown', onEsc);
+    }
+    function closeModal() {
+        panel.classList.add('opacity-0','scale-95');
+        panel.classList.remove('opacity-100','scale-100');
+        setTimeout(() => modal.classList.add('hidden'), 150);
+        document.removeEventListener('keydown', onEsc);
+    }
+    function onEsc(e){ if(e.key === 'Escape') closeModal(); }
+
+    modal.addEventListener('click', (e) => {
+        if (e.target.matches('[data-close], [data-close] * , .bg-black\\/50')) closeModal();
+    });
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        btn.disabled = true; spinner.classList.remove('hidden');
+
+        try {
+        const body = new FormData(form); // Web3Forms accepts URL-encoded or multipart
+        const resp = await fetch(form.action, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body
+        });
+        const data = await resp.json().catch(() => ({}));
+        if (!resp.ok) throw new Error(data.message || 'Submission failed');
+
+        form.reset();
+        openModal();
+        } catch (err) {
+        alert(err.message || 'Something went wrong. Please try again.');
+        } finally {
+        btn.disabled = false; spinner.classList.add('hidden');
+        }
+    });
+    })();
+    </script>
+
+
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Accordion functionality
+        const accordionToggles = document.querySelectorAll('.accordion-toggle');
+        accordionToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                // Toggle the content
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        });
+
+        // Add fade-in animation to elements when they come into view
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
