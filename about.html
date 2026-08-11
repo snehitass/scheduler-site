@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:site_name" content="EquiShift AI">
+    <meta name="author" content="EquiShift AI">
+    <title>About — EquiShift</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        .mono {
+            font-family: 'Space Mono', monospace;
+        }
+
+        .stat-card {
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <svg width="40" height="76" viewBox="0 0 2000 3812" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_4_2)">
+                        <path d="M1331 282.051C1221.15 174.836 1279.9 15.9415 1435.51 2.31459C1561.75 -8.74117 1603.86 41.7811 1695.45 100.724C1864.18 209.224 1979.5 289.957 1997.04 512.615C2041.33 1073.44 1566.32 1596.85 1148.77 1907.31C1188.43 1945.43 1235.29 1974.87 1277.33 2010.03C1599.61 2279.87 1942.99 2688.41 1887.06 3140.61C1774.32 4052.07 163.394 4038.37 107.408 3077.04C82.7896 2654.15 393.636 2277.55 695.677 2019.93C736.751 1984.9 797.172 1949.29 833.296 1913.29C838.567 1908.02 842.488 1907.57 840.109 1897.73C697.863 1803.18 559.859 1677.13 444.737 1550.64C188.076 1268.52 -101.559 774.354 34.967 382.196C93.1383 215.138 182.806 172.908 323.831 92.5605C418.191 38.76 461.321 -11.1194 585.634 2.18604C854.443 30.9824 726.402 413.627 473.984 325.953C413.434 304.934 389.651 265.082 316.182 303.391C149.831 390.166 184.67 675.173 227.864 822.691C341.957 1212.34 675.301 1550.06 997.654 1779.85C1341.35 1538.29 1692.37 1183.74 1788.4 760.02C1817.45 631.786 1838.47 371.911 1694.49 301.013C1604.63 256.726 1580.59 322.289 1510.4 334.245C1447.08 344.979 1377.21 327.11 1331 282.051ZM986.405 2027.38C971.621 2030.47 848.98 2133.06 827.254 2151.5C567.058 2372.23 270.995 2704.48 293.878 3070.67C343.693 3867.59 1768.02 3818.03 1707.86 3000.1C1687.55 2724.35 1470.29 2445.19 1277.39 2260.71C1208.87 2195.21 1090.41 2086 1013.4 2036.25C1004.53 2030.53 998.104 2024.88 986.405 2027.32V2027.38Z" fill="#475569"/>
+                        <path d="M1624.36 882.147C1522.35 1157.32 1316.73 1409.35 1083.79 1585.28C1067.14 1597.88 1014.3 1642.17 998.104 1640.75C973.293 1638.63 835.224 1526.21 807.97 1502.43C640.656 1356.45 473.341 1144.66 389.137 937.812C381.295 918.593 344.785 846.088 368.954 838.246C387.273 832.268 448.722 825.712 470.641 824.297C683.979 810.349 823.847 850.33 1025.23 886.647C1226.61 922.964 1424.26 926.949 1624.3 882.147H1624.36Z" fill="#22d3ee"/>
+                        <path d="M498.023 2818.58L1486.49 2816.65C1569.21 2823.72 1607.65 2894.1 1616.2 2969.76C1695.39 3669.74 551.245 3726.37 398.586 3171.78C375.896 3089.32 364.583 2917.31 428.603 2852C445.251 2835.03 474.626 2821.98 498.023 2818.58Z" fill="#0ea5e9"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_4_2">
+                        <rect width="2000" height="3811.47" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    <span class="text-2xl font-bold text-gray-900">EquiShift</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="about.html" class="text-gray-600 hover:text-gray-900 font-medium">About</a>
+                    <a href="index.html#problem" class="text-gray-600 hover:text-gray-900 font-medium">The Problem</a>
+                    <a href="index.html#solution" class="text-gray-600 hover:text-gray-900 font-medium">Our Solution</a>
+                    <a href="index.html#benefits" class="text-gray-600 hover:text-gray-900 font-medium">Benefits</a>
+                    <a href="index.html#contact" class="text-gray-600 hover:text-gray-900 font-medium">Contact</a>
+                    <a href="https://cal.com/snehita-sana/25min?duration=25" class="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg transition-all inline-block text-center">
+                        Book a Demo
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
+                <div class="flex flex-col gap-4">
+                    <a href="about.html" class="text-gray-600 hover:text-gray-900 font-medium py-2">About</a>
+                    <a href="index.html#problem" class="text-gray-600 hover:text-gray-900 font-medium py-2">The Problem</a>
+                    <a href="index.html#solution" class="text-gray-600 hover:text-gray-900 font-medium py-2">Our Solution</a>
+                    <a href="index.html#benefits" class="text-gray-600 hover:text-gray-900 font-medium py-2">Benefits</a>
+                    <a href="index.html#contact" class="text-gray-600 hover:text-gray-900 font-medium py-2">Contact</a>
+                    <a href="https://cal.com/snehita-sana/25min?duration=25" class="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all text-center inline-block">
+                        Book a Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                hamburgerIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                });
+            });
+        </script>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-blue-50 to-white py-20">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                We tell emergency departments what's coming.
+            </h1>
+            <p class="text-xl text-gray-600 mb-12 leading-relaxed max-w-3xl mx-auto">
+                Our mission is to make hospital staffing responsive to the demand that's actually coming — not the demand that already happened.
+            </p>
+
+            <!-- Pull-quote -->
+            <div class="max-w-2xl mx-auto flex flex-col items-center gap-4">
+                <img src="snehita.jpg" alt="Snehita Sana" class="w-16 h-16 rounded-full object-cover border-2 border-gray-200">
+                <blockquote class="text-xl text-gray-600 italic leading-relaxed">
+                    "Clinicians give a decade of their lives to this. The system shouldn't grind them down."
+                </blockquote>
+                <p class="text-sm text-gray-600 font-semibold">— Snehita Sana, Founder &amp; CEO</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <p class="text-xl text-gray-600 leading-relaxed mb-6">
+                Equishift started with one clinician. Snehita's sister spent her twenties becoming a doctor because she wanted to help people, and the system burned her out within a few years.
+            </p>
+            <p class="text-xl text-gray-600 leading-relaxed mb-6">
+                Our first answer was scheduling. Clinicians wanted it — their schedules really were bad. But the people who sign the contracts wouldn't buy it, and they weren't wrong to hesitate: a fairer schedule doesn't show up on anyone's P&amp;L.
+            </p>
+            <p class="text-xl text-gray-600 leading-relaxed mb-6">
+                Staffing to the wrong number does. So we moved upstream and built the forecast instead — the same goal, in the form a hospital can act on.
+            </p>
+            <p class="text-xl text-gray-600 leading-relaxed">
+                We tell you how many patients are coming, and what it would cost to be ready for them. Clinicians make the final call.
+            </p>
+        </div>
+    </section>
+
+    <!-- The Team -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    The team
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Snehita Sana -->
+                <div class="stat-card bg-white rounded-xl p-6 border-2 border-gray-200 flex flex-col">
+                    <img src="snehita.jpg" alt="Snehita Sana" class="w-full aspect-square object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Snehita Sana</h3>
+                    <p class="text-sm text-gray-600 mb-4">Founder &amp; CEO</p>
+                    <p class="text-gray-600 text-sm">Snehita studied statistics at Carnegie Mellon and was employee #1 at Math ANEX, a B2B education startup acquired by Amplify. She started Equishift in 2024 after watching her sister burn out of medicine, and spent the next year in roughly 400 conversations with emergency physicians, nurses, and hospital administrators. She went full-time in October 2025.</p>
+                </div>
+
+                <!-- Dave Miller -->
+                <div class="stat-card bg-white rounded-xl p-6 border-2 border-gray-200 flex flex-col">
+                    <img src="dave.jpg" alt="Dave Miller" class="w-full aspect-square object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Dave Miller</h3>
+                    <p class="text-sm text-gray-600 mb-4">Engineer</p>
+                    <p class="text-gray-600 text-sm">[BIO TO COME]</p>
+                </div>
+
+                <!-- Andrew Taylor, MD -->
+                <div class="stat-card bg-white rounded-xl p-6 border-2 border-gray-200 flex flex-col">
+                    <img src="andrew.jpg" alt="Andrew Taylor, MD" class="w-full aspect-square object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Andrew Taylor, MD</h3>
+                    <p class="text-sm text-gray-600 mb-4">Clinical Advisor</p>
+                    <p class="text-gray-600 text-sm">[BIO TO COME]</p>
+                </div>
+
+                <!-- Open Role -->
+                <div class="stat-card bg-white rounded-xl p-6 border-2 border-dashed border-gray-300 flex flex-col">
+                    <div class="w-full aspect-square rounded-lg mb-4 bg-gray-50 flex items-center justify-center">
+                        <a href="mailto:snehita@equishift.ai" class="text-blue-600 hover:text-blue-700 font-semibold transition-colors">Get in touch</a>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Medical Co-Founder</h3>
+                    <p class="text-sm text-gray-600 mb-4">Open</p>
+                    <p class="text-gray-600 text-sm">We're looking for someone who has run an emergency department and wants to build the tool they wished they'd had.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work -->
+    <section class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    How we work
+                </h2>
+            </div>
+
+            <div class="space-y-12">
+                <div>
+                    <div class="flex items-baseline gap-4 mb-2">
+                        <span class="mono text-2xl font-bold text-blue-600">01</span>
+                        <h3 class="text-xl font-bold text-gray-900">Clinicians make the final call.</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed pl-12">We recommend. The person in the department decides. There is no autopilot and no scenario where a model changes a staffing plan on its own.</p>
+                </div>
+
+                <div>
+                    <div class="flex items-baseline gap-4 mb-2">
+                        <span class="mono text-2xl font-bold text-blue-600">02</span>
+                        <h3 class="text-xl font-bold text-gray-900">We build with clinicians, not for them.</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed pl-12">Around 400 conversations with physicians, nurses, and administrators came before a single line of the current product existed.</p>
+                </div>
+
+                <div>
+                    <div class="flex items-baseline gap-4 mb-2">
+                        <span class="mono text-2xl font-bold text-blue-600">03</span>
+                        <h3 class="text-xl font-bold text-gray-900">We show the uncertainty.</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed pl-12">A forecast that hides how confident it is asks clinicians to trust it blindly. We'd rather show the range and let people decide how much weight to give it.</p>
+                </div>
+
+                <div>
+                    <div class="flex items-baseline gap-4 mb-2">
+                        <span class="mono text-2xl font-bold text-blue-600">04</span>
+                        <h3 class="text-xl font-bold text-gray-900">We change our minds when the evidence says to.</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed pl-12">Two versions of this company died on our own read of the data.</p>
+                </div>
+
+                <div>
+                    <div class="flex items-baseline gap-4 mb-2">
+                        <span class="mono text-2xl font-bold text-blue-600">05</span>
+                        <h3 class="text-xl font-bold text-gray-900">Every recommendation carries its cost.</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed pl-12">If we tell a hospital to add a nurse, we show what it costs and what it returns. No recommendation without a number.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                See it on your own data.
+            </h2>
+            <p class="text-xl text-gray-600 mb-8">
+                We're running pilot conversations with regional health systems now, and we're looking for a medical co-founder who has run an emergency department.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://cal.com/snehita-sana/25min" class="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-10 py-5 rounded-lg font-bold text-lg hover:shadow-xl transition-all inline-block">
+                    Book 25 minutes
+                </a>
+                <a href="mailto:snehita@equishift.ai" class="border-2 border-gray-300 text-gray-700 px-10 py-5 rounded-lg font-bold text-lg hover:border-blue-600 hover:text-blue-600 transition-all inline-block">
+                    snehita@equishift.ai
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 pb-6">
+                <div>
+                    <div class="flex items-center gap-3">
+                        <svg width="40" height="76" viewBox="0 0 2000 3812" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_4_2_footer)">
+                            <path d="M1331 282.051C1221.15 174.836 1279.9 15.9415 1435.51 2.31459C1561.75 -8.74117 1603.86 41.7811 1695.45 100.724C1864.18 209.224 1979.5 289.957 1997.04 512.615C2041.33 1073.44 1566.32 1596.85 1148.77 1907.31C1188.43 1945.43 1235.29 1974.87 1277.33 2010.03C1599.61 2279.87 1942.99 2688.41 1887.06 3140.61C1774.32 4052.07 163.394 4038.37 107.408 3077.04C82.7896 2654.15 393.636 2277.55 695.677 2019.93C736.751 1984.9 797.172 1949.29 833.296 1913.29C838.567 1908.02 842.488 1907.57 840.109 1897.73C697.863 1803.18 559.859 1677.13 444.737 1550.64C188.076 1268.52 -101.559 774.354 34.967 382.196C93.1383 215.138 182.806 172.908 323.831 92.5605C418.191 38.76 461.321 -11.1194 585.634 2.18604C854.443 30.9824 726.402 413.627 473.984 325.953C413.434 304.934 389.651 265.082 316.182 303.391C149.831 390.166 184.67 675.173 227.864 822.691C341.957 1212.34 675.301 1550.06 997.654 1779.85C1341.35 1538.29 1692.37 1183.74 1788.4 760.02C1817.45 631.786 1838.47 371.911 1694.49 301.013C1604.63 256.726 1580.59 322.289 1510.4 334.245C1447.08 344.979 1377.21 327.11 1331 282.051ZM986.405 2027.38C971.621 2030.47 848.98 2133.06 827.254 2151.5C567.058 2372.23 270.995 2704.48 293.878 3070.67C343.693 3867.59 1768.02 3818.03 1707.86 3000.1C1687.55 2724.35 1470.29 2445.19 1277.39 2260.71C1208.87 2195.21 1090.41 2086 1013.4 2036.25C1004.53 2030.53 998.104 2024.88 986.405 2027.32V2027.38Z" fill="#94a3b8"/>
+                            <path d="M1624.36 882.147C1522.35 1157.32 1316.73 1409.35 1083.79 1585.28C1067.14 1597.88 1014.3 1642.17 998.104 1640.75C973.293 1638.63 835.224 1526.21 807.97 1502.43C640.656 1356.45 473.341 1144.66 389.137 937.812C381.295 918.593 344.785 846.088 368.954 838.246C387.273 832.268 448.722 825.712 470.641 824.297C683.979 810.349 823.847 850.33 1025.23 886.647C1226.61 922.964 1424.26 926.949 1624.3 882.147H1624.36Z" fill="#22d3ee"/>
+                            <path d="M498.023 2818.58L1486.49 2816.65C1569.21 2823.72 1607.65 2894.1 1616.2 2969.76C1695.39 3669.74 551.245 3726.37 398.586 3171.78C375.896 3089.32 364.583 2917.31 428.603 2852C445.251 2835.03 474.626 2821.98 498.023 2818.58Z" fill="#0ea5e9"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_4_2_footer">
+                            <rect width="2000" height="3811.47" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="text-xl font-semibold">EquiShift</span>
+                    </div>
+                    <p class="mt-2 text-gray-400 text-sm">
+                        Smart Staffing for Real Patient Demand
+                    </p>
+                </div>
+
+                <nav class="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-gray-400">
+                    <a href="index.html#" class="hover:text-white transition-colors">Features</a>
+                    <a href="index.html#" class="hover:text-white transition-colors">Pricing</a>
+                    <a href="index.html#contact" class="hover:text-white transition-colors">Contact Us</a>
+                    <a href="about.html" class="hover:text-white transition-colors">About</a>
+                    <a href="\privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="\terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+                </nav>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2026 EquiShift. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1fe87583ddf84834a8f4c74418311957"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
