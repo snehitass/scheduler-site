@@ -91,7 +91,23 @@
     @media (max-width: 900px) { .grid3, .grid2 { grid-template-columns: 1fr; } h2 { font-size: 30px; } .section { padding: 56px 24px; } }
     .card { border: 2px solid var(--line); border-radius: 12px; padding: 26px; background: var(--cream); display: flex; flex-direction: column; gap: 14px; }
     .card-white { background: var(--white); }
-    .card .step { font-size: 13px; font-weight: 700; color: var(--slate); letter-spacing: .04em; }
+    .card .step { width: 34px; height: 34px; border-radius: 6px; background: #4CC9E8; color: #06243A; font-size: 17px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+    .grid3.hw { align-items: stretch; }
+    .hw-card { padding: 32px; gap: 0; justify-content: flex-start; }
+    .hw-top { display: flex; align-items: center; justify-content: space-between; }
+    .hw-icon { width: 32px; height: 32px; color: var(--navy); flex: none; }
+    .hw-card h3 { margin: 24px 0 0; font-size: 21px; white-space: nowrap; line-height: 1.2; }
+    .hw-card p { margin: 12px 0 0 !important; }
+    /* heading → subtitle 12px, subtitle → cards 40px, in both sections */
+    .section-head.tight { gap: 12px; }
+    .section.tight { gap: 40px; }
+    /* proof stat cards */
+    .statcards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
+    .statcard { background: #EEF2FA; border-radius: 12px; padding: 24px; border-top: 3px solid #4CC9E8; display: flex; flex-direction: column; gap: 8px; }
+    .statcard .big { font-size: 40px; font-weight: 700; letter-spacing: -.02em; line-height: 1.05; color: var(--navy); }
+    .statcard .big.good { color: #1F9E6B; }
+    .statcard p { margin: 0; font-size: 15px; color: var(--slate); line-height: 1.45; }
+    @media (max-width: 900px) { .statcards { grid-template-columns: 1fr 1fr; } }
     .card .shot { height: 196px; border-radius: 8px; background: var(--ink); overflow: hidden; display: flex; align-items: center; justify-content: center; }
     .card .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
     .card .shot img.contain { object-fit: contain; }
@@ -99,6 +115,8 @@
     .q { font-size: 20px; font-weight: 600; line-height: 1.3; }
     /* proof */
     .proof { padding: 60px 24px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+    .proof.proof4 { padding: 0; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    @media (max-width: 900px) { .proof.proof4 { grid-template-columns: 1fr 1fr; } }
     .proof .big { font-size: 44px; font-weight: 700; letter-spacing: -.02em; line-height: 1.1; }
     .proof p { margin: 8px 0 0; font-size: 15px; color: var(--slate); }
     @media (max-width: 900px) { .proof { grid-template-columns: 1fr; gap: 20px; } }
@@ -251,12 +269,12 @@
     <h1>See the bottleneck before you spend the money.</h1>
     <p class="lead">Equishift AI models how your ED, imaging, inpatient units and OR depend on each other, finds the real constraint, and simulates what each fix would do, before you hire, build or buy.</p>
     <div class="hero-cta"><a href="#demo" class="btn btn-primary">Click through the demo ↓</a><a href="https://cal.com/snehita-sana/30min" class="btn btn-outline">Book a demo</a></div>
-    <div class="proofline">Arrival forecast validated on 18 months of held-out data across 4 UVA Health emergency departments</div>
+    <div class="proofline">Arrival forecast validated on 18 months of held-out data across four emergency departments</div>
   </header>
 
   <!-- Embedded guided demo -->
   <section id="demo" class="demo wrap">
-    <div class="demo-head"><div><h2 style="font-size:30px;margin-bottom:6px">The demo</h2><div>First the problem, as a number. Then what causes it, and what each fix does. About forty seconds once it starts.</div></div><small>Dots are patients · squares are staff · coral is the constraint</small></div>
+    <div class="demo-head"><div><h2 style="font-size:30px;margin-bottom:6px">The Demo</h2><div>First the problem, as a number. Then what causes it, and what each fix does. About forty seconds once it starts.</div></div><small>Dots are patients · squares are staff · coral is the constraint</small></div>
     <div id="problem" class="problem">
       <div class="problem-text">
         <div class="eyebrow" style="color:#A9B4C7">Tuesday evening · an illustrative 250-bed hospital</div>
@@ -349,19 +367,19 @@
 
   <!-- How it works -->
   <section id="how" class="band">
-    <div class="wrap section">
-      <div class="section-head"><h2>How it works</h2><p class="lead">The forecast tells you what is coming. The twin tells you what it does to the rest of the hospital, and what to do about it.</p></div>
-      <div class="grid3">
-        <div class="card"><div class="step">1 · FORECAST</div><div class="shot"><img class="contain" src="img/how-forecast.png" alt="Chart of predicted ER arrivals by hour with physicians on duty overlaid and the shortfall shaded"></div><h3>Know what is coming, by hour</h3><p>Arrivals, admissions and acuity from your own data, far enough ahead to change a schedule. Validated against 18 months of held-out data at 4 UVA Health EDs.</p></div>
-        <div class="card"><div class="step">2 · SIMULATE</div><div class="shot"><img class="contain" src="img/how-simulate.png" alt="ER treatment rooms beside the CT scanner, which glows as the bottleneck"></div><h3>Your departments, your staff, your schedule</h3><p>A model of how the ED, labs, imaging, inpatient units, OR and bed cleaning depend on each other, driven by who is actually on shift. It finds the constraint, and shows where it moves when you relieve it.</p></div>
-        <div class="card"><div class="step">3 · DECIDE</div><div class="shot"><img class="contain" src="img/how-decide.png" alt="Table comparing four fixes on cost per year, change in time in the ER and CT queue; the cheapest fix does the most"></div><h3>Every fix with its cost and its effect</h3><p>Test a hire, a shift change, a scanner or a schedule before paying for it. Compare them on the same week, with the same patients, side by side.</p></div>
+    <div class="wrap section tight">
+      <div class="section-head tight"><h2>How it works</h2><p class="lead">The forecast tells you how many patients are coming. The software shows what that does to the rest of the hospital, and what to do about it.</p></div>
+      <div class="grid3 hw">
+        <div class="card hw-card"><div class="hw-top"><div class="step">1</div><svg class="hw-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg></div><h3>Model it</h3><p>We map how your ER, labs, imaging, inpatient units, OR, and cleaning crews depend on each other, using data you already have.</p></div>
+        <div class="card hw-card"><div class="hw-top"><div class="step">2</div><svg class="hw-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div><h3>Find the cause</h3><p>Your team uses our software to see where delays start, not just where they show up, and where they’ll move next.</p></div>
+        <div class="card hw-card"><div class="hw-top"><div class="step">3</div><svg class="hw-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="21" x2="14" y1="4" y2="4"/><line x1="10" x2="3" y1="4" y2="4"/><line x1="21" x2="12" y1="12" y2="12"/><line x1="8" x2="3" y1="12" y2="12"/><line x1="21" x2="16" y1="20" y2="20"/><line x1="12" x2="3" y1="20" y2="20"/><line x1="14" x2="14" y1="2" y2="6"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="16" x2="16" y1="18" y2="22"/></svg></div><h3>Test every fix</h3><p>Try a hire, a shift change, a scanner, or a new schedule before paying for it. Every option runs on the same week with the same patients, with its cost and yearly net gain side by side.</p></div>
       </div>
     </div>
   </section>
 
   <!-- Questions -->
   <section id="questions" class="wrap section">
-    <div class="section-head"><h2>The questions it answers</h2><p class="lead">Each of these is a decision a hospital makes a few times a year, usually from a dashboard and a consultant's report.</p></div>
+    <div class="section-head" style="max-width: none"><h2 style="white-space: nowrap">Just a few of the hundreds of questions we answer</h2><p class="lead">Each of these is a decision a hospital makes a few times a year, usually from a dashboard and a consultant's report.</p></div>
     <div class="grid2">
       <div class="card card-white"><div class="q">Do we need a second CT scanner, or a different scan schedule?</div><p>The twin runs both on the same week. In the demo hospital, moving scheduled scans out of the ER peak does more than two hires for a tenth of the cost.</p></div>
       <div class="card card-white"><div class="q">Will another hospitalist fix boarding?</div><p>Faster admission orders do nothing when the beds do not open until afternoon. The twin shows which part of the chain is actually holding the patient.</p></div>
@@ -372,10 +390,14 @@
 
   <!-- Proof -->
   <section class="band">
-    <div class="wrap proof">
-      <div><div class="big">18 months</div><p>of held-out data the arrival forecast was validated on</p></div>
-      <div><div class="big">4 EDs</div><p>at UVA Health, from a Level I trauma center to a community site</p></div>
-      <div><div class="big">~400</div><p>conversations with emergency physicians, nurses and administrators before the current product existed</p></div>
+    <div class="wrap section tight">
+      <div class="section-head tight"><h2>Built on a forecast we’ve already proven</h2><p class="lead">To test any fix, you first need to know how many patients will show up. So we built that first: a forecast of daily ER patient volume, tested on 18 months of real ER visits.</p></div>
+      <div class="statcards">
+        <div class="statcard"><div class="big">4 weeks</div><p>how far ahead it beats the hospital’s current forecasts</p></div>
+        <div class="statcard"><div class="big good">−33%</div><p>next-day forecast error at the flagship ER</p></div>
+        <div class="statcard"><div class="big">4 EDs</div><p>from a Level I trauma center to a community site, in one health system</p></div>
+        <div class="statcard"><div class="big">600+</div><p>conversations with emergency physicians, nurses, and administrators</p></div>
+      </div>
     </div>
   </section>
 
@@ -383,7 +405,7 @@
   <section id="team" class="wrap section">
     <h2>Team</h2>
     <div class="grid3">
-      <div class="card card-white"><img class="avatar" src="snehita.jpg" alt="Snehita Sana"><div><div class="name">Snehita Sana</div><div class="role">Co-founder, CEO</div></div><p>B.S. Statistics, Carnegie Mellon. Employee #1 at Math ANEX, a B2B education startup acquired by Amplify in 2.5 years.</p></div>
+      <div class="card card-white"><img class="avatar" src="snehita-new.jpg" alt="Snehita Sana"><div><div class="name">Snehita Sana</div><div class="role">Co-founder, CEO</div></div><p>B.S. Statistics, Carnegie Mellon. Employee #1 at Math ANEX, a B2B education startup acquired by Amplify in 2.5 years.</p></div>
       <div class="card card-white"><img class="avatar" src="andrew.png" alt="Andrew Taylor"><div><div class="name">Andrew Taylor, M.D., M.S.</div><div class="role">Co-founder</div></div><p>Vice Chair of Research and Innovation, Department of Emergency Medicine, UVA School of Medicine.</p></div>
       <div class="card card-white"><img class="avatar" src="dave.png" alt="Dave Miller"><div><div class="name">Dave Miller</div><div class="role">Founding engineer</div></div><p>Founder and CTO, Rogue Tech LLC. <!-- TODO: one concrete line about what Dave built --></p></div>
     </div>
